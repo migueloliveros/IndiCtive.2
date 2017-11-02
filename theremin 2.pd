@@ -1,4 +1,4 @@
-#N canvas 1405 23 500 173 10;
+#N canvas 1225 314 500 173 10;
 #X text -46 77 % mean-cpu-load;
 #X text -46 93 % peak-cpu-load;
 #X obj -46 18 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
@@ -9,7 +9,7 @@
 1;
 #X floatatom 20 58 5 0 0 0 - - -;
 #X text 15 20 ON/OFF;
-#N canvas 1055 253 867 804 theremin 1;
+#N canvas 89 231 1162 758 theremin 1;
 #X obj 24 63 gemhead;
 #X obj 24 86 pix_video;
 #X obj 24 566 pix_texture;
@@ -17,7 +17,7 @@
 #X floatatom 207 210 5 0 0 0 - - -;
 #X floatatom 345 253 5 0 0 0 - - -;
 #X obj 345 341 +~;
-#X obj 186 657 output~;
+#X obj 188 667 output~;
 #X obj 202 348 +~;
 #X obj 121 298 +~;
 #X obj 213 516 +~;
@@ -29,7 +29,7 @@
 #X obj 583 479 +~;
 #X obj 504 425 +~;
 #X obj 428 356 +~;
-#X obj 213 571 +~;
+#X obj 213 570 +~;
 #X obj 213 546 +~;
 #X obj 213 593 +~;
 #X obj 120 245 osc~ 45.655;
@@ -69,15 +69,15 @@
 #X obj 772 481 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
 #X obj 731 415 hsl 60 18 0 1 0 1 empty empty dry 2 9 1 12 -225271 -1
--1 2630 0;
+-1 1971 0;
 #X obj 731 371 hsl 60 18 0 1 0 1 empty empty wet 2 9 1 12 -225271 -1
--1 2630 0;
+-1 1971 0;
 #X obj 731 327 hsl 60 18 0 1 0 1 empty empty width 2 9 1 12 -262131
--1 -1 1355 0;
+-1 -1 1609 0;
 #X obj 731 283 hsl 60 18 0 2 0 1 empty empty damping 2 9 1 12 -261689
--1 -1 1315 0;
+-1 -1 986 0;
 #X obj 731 238 hsl 60 18 0.11 1.1 0 1 empty empty roomsize 2 9 1 12
--261689 -1 -1 3574 0;
+-261689 -1 -1 190 0;
 #X floatatom 701 242 3 0 0 0 - - -;
 #X floatatom 701 287 3 0 0 0 - - -;
 #X floatatom 701 332 3 0 0 0 - - -;
@@ -175,7 +175,7 @@
 #X restore -41 135 pd theremin;
 #X obj 100 42 cnv 15 100 60 empty empty empty 20 12 0 14 -195568 -66577
 0;
-#N canvas 1352 603 455 304 gemwin 1;
+#N canvas 1352 603 455 304 gemwin 0;
 #X obj 132 182 gemwin;
 #X obj 67 89 outlet;
 #X obj 67 10 inlet;
@@ -202,8 +202,10 @@
 #X connect 10 0 9 0;
 #X connect 12 0 0 0;
 #X restore 115 81 pd gemwin;
-#X msg 115 62 create;
+#X msg 115 62 destroy;
 #X text 111 41 Create window:;
+#N canvas 546 23 1412 1008 META 0;
+#X restore 256 60 pd META;
 #X connect 4 0 3 0;
 #X connect 4 1 6 0;
 #X connect 5 0 4 0;
